@@ -17,7 +17,7 @@ const QuestionsList = ({ questions, onUpdate }) => {
             <strong>Difficulty: </strong> {question.difficulty}
           </div>
           <div>
-            <strong>Field: </strong> {question.field}
+            <strong>Category: </strong> {question.field}
           </div>
           <Button onClick={() => onUpdate(question._id)}>Update</Button>
         </div>

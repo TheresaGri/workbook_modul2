@@ -16,6 +16,10 @@ questionRouter.get("/", async (req, res) => {
       query = { ...query, checked: req.query["checked"] };
     }
 
+    if (req.query["difficulty"] !== undefined) {
+      query={...query, difficulty: req.query["difficulty"]}
+    }
+
     const questions = await QuestionModel.find(query);
     return res.json(questions);
   } catch (error) {
@@ -32,9 +36,9 @@ questionRouter.get("/:id", async (req, res) => {
   }
 });
 
-questionRouter.patch("/:id",(req,res) => {
+questionRouter.patch("/:id",async (req,res) => {
   try{
-    const question = QuestionModel.findOneAndUpdate(
+    const question = await QuestionModel.findOneAndUpdate(
       {_id: req.params.id },
       {$set: {...req.body}},
       {new: true}
