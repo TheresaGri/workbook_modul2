@@ -11,10 +11,7 @@
     "question": "What is the difference between `let` & `var` ?",
     "field": "functional patterns"
   },
-  {
-    "question": "Write an example where using the `var` declaration instead of the `let` could create a hard to debug code.",
-    "field": "functional patterns"
-  },
+  
   {
     "question": "Give a practical example where you would use the `reduce` function in javascript.",
     "field": "functional patterns"
@@ -183,7 +180,7 @@
     "field": "React patterns"
   },
   {
-    "question": "Why is there an infinite loop in this code\n\n```function App() {\n  const [count, setCount] = useState(0); //initial value of this\n  useEffect(() => {\n    setCount((count) => count + 1); //increment this Hook\n  }); //no dependency array.\n  return (\n    <div className=\"App\">\n      <p> value of count: {count} </p>\n    </div>\n  );\n}\n```",
+    "question": "Why is there an infinite loop in this code function App() {  const [count, setCount] = useState(0); //initial value of this  useEffect(() => {    setCount((count) => count + 1); //increment this Hook  }); //no dependency array.  return (    <div className=\"App\">      <p> value of count: {count} </p>    </div>  );}",
     "field": "React patterns"
   },
   {
