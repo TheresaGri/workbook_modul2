@@ -10,6 +10,7 @@ import StartPage from "./pages/StartPage";
 import QuestionOverview from "./pages/QuestionOverview";
 import LearnPage from "./pages/LearnPage";
 import QuestionUpdater from "./pages/QuestionUpdater";
+import LearnStartPage from "./pages/LearnStartPage";
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,12 @@ const router = createBrowserRouter([
         element: <QuestionUpdater />,
       },
       {
-        path: "/learn",
+        path: "/learn/startpage",
+        element: <LearnStartPage />
+      },
+
+      {
+        path: "/learn/index-card",
         element: <LearnPage />,
       },
     ],

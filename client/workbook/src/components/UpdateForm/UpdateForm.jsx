@@ -13,6 +13,8 @@ const UpdateForm = ({
 }) => {
   const arrOfDifficulties = ["easy", "medium", "hard"];
 
+  console.log(valueOfDifficulty);
+
   return (
     <div className="updateForm">
       <div>
@@ -23,8 +25,8 @@ const UpdateForm = ({
       <textarea id="answer" value={value} onChange={onChange}></textarea>
       <SelectField
         options={arrOfDifficulties}
-        onChange={onSelectDifficulty}
         value={valueOfDifficulty}
+        onChange={onSelectDifficulty}
       ></SelectField>
       <Button onClick={onClick}>Submit</Button>
       <Button onClick={onCancel}>Cancel</Button>

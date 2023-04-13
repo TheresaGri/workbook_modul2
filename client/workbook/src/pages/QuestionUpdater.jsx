@@ -30,8 +30,10 @@ const QuestionUpdater = () => {
   };
 
   const onDifficultyChange = (event) => {
+    console.log(event.target.value);
     setQuestion({ ...question, difficulty: event.target.value });
   };
+
 
   const updateQuestion = async (question) => {
     await fetch(`http://localhost:4000/api/questions/${question._id}`, {
