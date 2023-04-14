@@ -1,12 +1,15 @@
-import dotenv from "dotenv";
-import mongoose from "mongoose";
+/* import dotenv from "dotenv";
+ */import mongoose from "mongoose";
 import express from "express";
 import cors from "cors";
 import questionRouter from "./routes/questions.js";
 
-dotenv.config();
+/* dotenv.config();
+ */
 
-const { MONGO_URL, PORT = 4000 } = process.env;
+const MONGO_URL="mongodb+srv://theresagri:theresaGriPassword@cluster0.jycu5sj.mongodb.net/Workbook"
+
+const PORT = 4000;
 
 console.log(MONGO_URL);
 
