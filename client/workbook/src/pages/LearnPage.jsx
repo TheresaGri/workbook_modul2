@@ -22,7 +22,7 @@ const LearnPage = () => {
   }, [difficulty, category]);
 
   const updateQuestion = async (question) => {
-    await fetch(`http://localhost:4000/api/questions/${question._id}`, {
+    await fetch(`https://fine-common-lathe.glitch.me/api/questions/${question._id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

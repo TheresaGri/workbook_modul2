@@ -73,7 +73,7 @@ const QuestionOverview = () => {
     });
     setQuestions(updatedQuestions);
 
-    await fetch(`http://localhost:4000/api/questions/${id}`, {
+    await fetch(`https://fine-common-lathe.glitch.me/api/questions/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -94,7 +94,7 @@ const QuestionOverview = () => {
       })
     );
 
-    await fetch(`http://localhost:4000/api/questions`, {
+    await fetch(`https://fine-common-lathe.glitch.me/api/questions`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

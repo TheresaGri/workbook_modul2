@@ -10,7 +10,7 @@ const QuestionUpdater = () => {
   const [answer, setAnswer] = useState("");
 
   const fetchQuestionById = async (id) => {
-    const url = `http://localhost:4000/api/questions/${id}`;
+    const url = `https://fine-common-lathe.glitch.me/api/questions/${id}`;
     const res = await fetch(url);
     const data = await res.json();
     return data;
@@ -36,7 +36,7 @@ const QuestionUpdater = () => {
 
 
   const updateQuestion = async (question) => {
-    await fetch(`http://localhost:4000/api/questions/${question._id}`, {
+    await fetch(`https://fine-common-lathe.glitch.me/api/questions/${question._id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
