@@ -59,10 +59,10 @@ const LearnPage = () => {
   return (
     <div className="learnPage">
       {questions.length !== 0 ? (
-        <div className="questionContainer">
+        <div className="questionAndAnswer_Container">
           {questionShown && (
-            <div>
-              <strong> Question: </strong>
+            <div className="questionLearnPage">
+              <strong><u> Question</u>: </strong>
               {questionShown?.question}{" "}
             </div>
           )}
@@ -70,7 +70,7 @@ const LearnPage = () => {
             <div className="answerContainer">
               <div className="answer">
                 {" "}
-                <strong>Answer: </strong> {questionShown?.answer}
+                <strong><u>Answer</u>: </strong> {questionShown?.answer}
               </div>
               <div className="dontShowAgainLabel">
                 {" "}

@@ -13,7 +13,6 @@ const UpdateForm = ({
 }) => {
   const arrOfDifficulties = ["easy", "medium", "hard"];
 
-  console.log(valueOfDifficulty);
 
   return (
     <div className="updateForm">

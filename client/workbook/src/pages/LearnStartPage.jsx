@@ -28,8 +28,6 @@ const LearnStartPage = () => {
     getDifficulty();
   }, []);
 
-  console.log(difficulties);
-
   const changeCategory = (event) => {
     setCategory(event.target.value);
     setObjectOfValues({ ...objectOfValues, category: event.target.value });
@@ -47,17 +45,22 @@ const LearnStartPage = () => {
   return (
     <div className="learnPageForm">
       <div className="selectField">
-        <SelectField
-          options={difficulties}
-          onChange={changeDifficulty}
-          value={difficulty}
-        ></SelectField>
-
-        <SelectField
-          options={categories}
-          onChange={changeCategory}
-          value={category}
-        ></SelectField>
+        <div className="selectFieldDifficulty">
+        <strong>  Filter by difficulty </strong>
+          <SelectField
+            options={difficulties}
+            onChange={changeDifficulty}
+            value={difficulty}
+          ></SelectField>
+        </div>
+        <div className="selectFieldCategory">
+          <strong>Filter by category</strong>
+          <SelectField
+            options={categories}
+            onChange={changeCategory}
+            value={category}
+          ></SelectField>
+        </div>
       </div>
 
       <Button onClick={() => startLearnIndexPage()} className="startButton">

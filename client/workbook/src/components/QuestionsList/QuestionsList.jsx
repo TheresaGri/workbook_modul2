@@ -7,22 +7,22 @@ const QuestionsList = ({ questions, onUpdate, onChange }) => {
       {questions.map((question) => (
         <div className="question" key={question._id}>
           <div>
-            <strong>Q: </strong> {question.question}
+            <strong><u>Q</u>: </strong> <strong> {question.question} </strong>
           </div>
           <div>
-            <strong>A: </strong>{" "}
+            <strong><u>A</u>: </strong>{" "}
           </div>
           <textarea className= "textareaQuestionsList"readOnly={true} value={question.answer} />
 
           <div>
             {" "}
-            <strong>Difficulty: </strong> {question.difficulty}
+            <strong><u>Difficulty</u></strong>: {question.difficulty}
           </div>
           <div>
-            <strong>Category: </strong> {question.field}
+            <strong><u>Category</u>: </strong> {question.field}
           </div>
           <div>
-            <strong>Checked: </strong>{" "}
+            <strong><u>Checked</u>: </strong>{" "}
             <input type="checkbox" checked={question.checked} onChange={(event) => onChange(question._id,event)} />
           </div>
           <Button onClick={() => onUpdate(question._id)}>Update</Button>
